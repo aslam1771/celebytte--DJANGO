@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-y!+_3js6g_v#p=yvp5u!4#3^9z_2bwo=6&wfss5b4hf296azwc
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
@@ -125,8 +125,4 @@ import os
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
 
-ALLOWED_HOSTS = ['*']
