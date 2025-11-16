@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  HOME
+{% endblock %}
+
+{% block content %}
+<style>
+  .full-background {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("{% static 'images/img.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .full-background {
+      padding: 1rem;
+      background-position: top;
+    }
+  }
+</style>
+
+<div class="full-background">
+  <!-- Your centered text or buttons here -->
+</div>
+{% endblock %}
+

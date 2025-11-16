@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load form_tags %}
+{% load static %}
+
+{% block title %}
+  BOOKING
+{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .booking-card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.95);
+  }
+
+  @media (max-width: 576px) {
+    .booking-card {
+      padding: 20px !important;
+    }
+
+    .booking-card h3 {
+      font-size: 1.5rem;
+    }
+
+    .form-control, .form-select {
+      font-size: 0.95rem;
+    }
+
+    button[type="submit"] {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="container py-5 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="card shadow-lg p-4 booking-card">
+    <h3 class="text-center mb-4" style="font-weight: 600;">Book Your service</h3>
+
+    <!-- ✅ Success Message Popup -->
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="POST" action="">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        {{ form.cus_name.label_tag }}
+        {{ form.cus_name|add_class:"form-control rounded-3" }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.cus_ph.label_tag }}
+        {{ form.cus_ph|add_class:"form-control rounded-3" }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.type.label_tag }}
+        {{ form.type|add_class:"form-select rounded-3" }}
+      </div>
+
+      <div class="mb-3">
+        {{ form.booking_date.label_tag }}
+        {{ form.booking_date|add_class:"form-control rounded-3" }}
+      </div>
+
+      <button type="submit" class="btn w-100 text-white" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); border-radius: 25px;">
+        Book Now
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+

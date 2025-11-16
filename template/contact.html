@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}CONTACT{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(135deg, #1d2b64, #f8cdda); /* Rich aesthetic background */
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .contact-section {
+    background-color: rgba(255, 255, 255, 0.95); /* semi-white box for contrast */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-heading {
+    font-weight: bold;
+    font-size: 30px;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-info p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  @media (max-width: 576px) {
+    .contact-section {
+      padding: 25px;
+    }
+
+    .contact-heading {
+      font-size: 24px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<div class="container py-5 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="contact-section w-100" style="max-width: 600px;">
+    <div class="contact-heading">Contact Me</div>
+
+    <div class="contact-info text-center">
+      <p><strong>Email:</strong> celebyte2025@gmail.com</p>
+      <p><strong>Phone:</strong> 8593936973</p>
+      <p><strong>Address:</strong> Kochi, Kerala</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+

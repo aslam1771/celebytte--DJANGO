@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  services
+{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .insta-gradient {
+    font-weight: bold;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  .card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .card {
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    .card-img-top {
+      height: 200px;
+    }
+
+    .card-body h4 {
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      font-size: 15px;
+      text-align: justify;
+    }
+
+    .row-cols-md-3 > .col {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<div class="container py-5">
+  <h2 class="insta-gradient mb-3" style="font-size: 2.2rem;">OUR SERVICES</h2>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for i in ser %}
+    <div class="col mb-4">
+      <div class="card h-100 shadow">
+        <img src="{{ i.img.url }}" class="card-img-top" alt="{{ i.name }}">
+        <div class="card-body">
+          <h4 class="card-title text-center font-weight-bold">{{ i.name }}</h4>
+          <p class="card-text text-justify">{{ i.desc }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+
+

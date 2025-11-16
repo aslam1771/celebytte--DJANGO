@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  ABOUT
+{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.8rem !important;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem !important;
+      text-align: justify;
+    }
+
+    .plan-card {
+      padding: 20px !important;
+    }
+
+    .plan-card h4 {
+      font-size: 1.3rem !important;
+      text-align: center;
+    }
+
+    .plan-card p {
+      font-size: 0.95rem !important;
+    }
+  }
+</style>
+
+<!-- Section Header -->
+<section class="py-5">
+  <div class="container">
+    <h2 style="
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    ">
+      Hey Social Media Influencer!
+    </h2>
+
+    <p class="mt-4" style="font-size: 1.2rem;">
+      You already know the power of social media — but in today’s world, standing out requires more than just great content.
+      You need a team that supports, promotes, and builds a buzz around you. That’s exactly what we offer.
+    </p>
+
+    <p style="font-size: 1.2rem;">
+      We become your fan base behind the scenes — creating and managing fan pages that post your best moments, edits, trolls, and highlights.
+      We spark curiosity and grow your visibility across social platforms.
+    </p>
+
+    <p style="font-size: 1.2rem;">
+      Our influencers have gained thousands of followers through our campaigns. Due to privacy, we can’t reveal names — but the success speaks for itself.
+    </p>
+
+    <p style="font-size: 1.2rem;">
+      From collaborations to daily posting, we ensure you’re seen, liked, and followed. Let’s take your fame to the next level.
+    </p>
+  </div>
+</section>
+
+<!-- Service Plans Section -->
+<section class="py-5" style="background-color: #f2f2f2;">
+  <div class="container">
+    <h3 class="text-center mb-5" style="
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    ">Our PR Packages</h3>
+
+    <div class="row text-white">
+
+      <!-- Basic Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="p-5 h-100 rounded shadow plan-card" style="min-height: 470px; background: linear-gradient(135deg, #d3d3d3, #a9a9a9);">
+          <h4 style="
+            font-weight: bold;
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          ">Basic – ₹7,000</h4>
+          <p style="font-size: 1.1rem; font-weight: 600;">
+            • 10 fan accounts created and managed<br>
+            • Regular posts: edits, scenes, trolls<br>
+            • Builds curiosity and buzz<br>
+            • Weekly performance and interaction report
+          </p>
+        </div>
+      </div>
+
+      <!-- Elite Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="p-5 h-100 rounded shadow plan-card" style="min-height: 470px; background: linear-gradient(135deg, #b0b0b0, #808080);">
+          <h4 style="
+            font-weight: bold;
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          ">Elite – ₹14,000</h4>
+          <p style="font-size: 1.1rem; font-weight: 600;">
+            • 15 fan accounts actively promoting you<br>
+            • Engaging content, trolls, viral moments<br>
+            • 3 collaborations with top Instagram pages<br>
+            • Weekly engagement and like reports
+          </p>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-md-4 mb-4">
+        <div class="p-5 h-100 rounded shadow plan-card" style="min-height: 470px; background: linear-gradient(135deg, #999, #555);">
+          <h4 style="
+            font-weight: bold;
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          ">Premium – ₹21,000</h4>
+          <p style="font-size: 1.1rem; font-weight: 600;">
+            • 20 daily fan pages posting viral content<br>
+            • 35+ collaborations with top IG pages<br>
+            • Maximum visibility & reach guaranteed<br>
+            • Daily reports on likes, shares, reach & growth
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+
